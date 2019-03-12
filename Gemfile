@@ -66,6 +66,9 @@ source 'https://rails-assets.org' do
 end
   
 gem 'will_paginate', '> 3.0'
+
+gem "font-awesome-rails"
+
 gem 'simple_form'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
