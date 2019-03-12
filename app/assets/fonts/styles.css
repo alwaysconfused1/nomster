@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'FamiliarPro-Bold';
-  src: url('FamiliarPro-Bold.eot') format('embedded-opentype');
+  src: font_url('FamiliarPro-Bold.eot') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
