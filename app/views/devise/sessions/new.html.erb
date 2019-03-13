@@ -1,5 +1,5 @@
 <div class="booyah-box">
-<h2>Log in</h2>
+<h2 class="a">Log in</h2>
 <br />
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
@@ -10,14 +10,14 @@
     <%= f.input :password,
                 required: false,
                  %>
-   
+   </div>
   </div>
   <br />
 
   <div class="form-actions">
     <%= f.button :submit, "Log in", class: 'btn btn-primary' %>
-    
-  </div>
+  </div>  
+  
 <% end %>
 <br />
 
