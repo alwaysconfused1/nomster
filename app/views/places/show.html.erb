@@ -7,13 +7,26 @@
  
  <% if @place.latitude.present? && @place.longitude.present? %>
  
+   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 100%;
+    }
+  </style>
+  </head>
+  <body>
+  <div id="map"></div>
   <script>
 
     function initMap() {
-       var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+      var myLatLng = {lat: -25.363, lng: 131.044};
 
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: 4,
         center: myLatLng
       });
 
@@ -24,10 +37,8 @@
       });
     }
   </script>
-
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtfsfk6tsYoxiR1aiaCVRORqUZkoK4w34&callback=initMap">
-  </script>
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtfsfk6tsYoxiR1aiaCVRORqUZkoK4w34&callback=initMap"></script>
  
  <div id="map"></div>
 
