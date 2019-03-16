@@ -46,110 +46,22 @@
 </div>
 
 <div class="clear"></div>
-
-
-<!-- button trigger model -->
-<button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myPhotoModal">
-	Upload a photo
-</button>
-
-<h1>Photos</h1>
-<br />
-<% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture.url %>
-  <%= photo.caption %>
+<%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
+  <%= f.input :message %>
+   <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+  <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
 <% end %>
 
-<!-- Photo Modal -->
-<div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myPhotoModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h4 class="modal-title" id="myPhotoModalLabel">Add a Photo</h4>
-      </div>
-      <div class="modal-body">
-
-
- 
- <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %> 
-  <%= f.input :picture %>
-  <br />
-  <%= f.input :caption %>
-  <br />
-
-</div>
-
-<div class="modal-footer">
-	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
-</div>
-<% end %>
-		</div>
-	</div>
-</div>
-
-<div class="clear"></div>
-
-
-<!-- Button trigger model -->
-<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myCommentModal">
-	Add a comment
-</button>
+<h1>Comments</h1>
 
 <% @place.comments.each do |comment| %>
-	<div class="col-12 col-sm-6">
-		<blockquote>
-			<% if comment.humanized_rating.present? %>
-			<b><%= comment.humanized_rating %></b> -
-			<% end %>
-			<%= comment.message %>
-			<small><%= comment.user.email %></small>
-		</blockquote>
-	</div>
-	<% end %>
-
-
-
-
-<!-- Comment Modal -->
-<div class="modal fade" id="myCommentModal" tabindex="-1" role="dialog" aria-labelledby="myCommentModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h4 class="modal-title" id="myCommentModalLabel">Add a Comment</h4>
-      </div>
-
-      <div class="modal-body">
-            <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
-        
-
-          <%= f.input :message %>
-          <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
-        </div>
+  <div>
+    <blockquote>
+        <% if comment.humanized_rating.present? %>
+        <b><%= comment.humanized_rating %></b> -
       <% end %>
-    </div>
-</div>
-</div>
-<div class="col-10 offset-1">
-<h1 class="float-left">Comments</h1>
-
-
-
-
-</div>
-
-<div class="clear"></div>
-
-	<div class="row">
-	
-</div>
+      <%= comment.message %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
+  </div>
+<% end %>
