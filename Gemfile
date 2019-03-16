@@ -6,9 +6,13 @@ gem 'jquery-rails'
 
 gem 'kaminari'
 
+gem 'carrierwave', '~> 1.0'
+
 gem 'geocoder'
 
 gem 'figaro'
+
+gem 'fog-aws'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
