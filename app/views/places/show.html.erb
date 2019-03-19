@@ -60,18 +60,16 @@
     <div class="clear"></div>
     <br />
 
-
-
-
-
  
-    
+    <div class="booyah-box col-10 offset-1">
     <% @place.photos.each do |photo| %>
       <%= image_tag photo.picture.url %>
-      
+      <br />
+
        <%= photo.caption %>
        
     <% end %>
+  </div>
       
 
  
