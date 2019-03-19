@@ -29,11 +29,13 @@
 <% end %>
 </div>
 </div>
+ <% if @photos %>
  <% @place.photos.each do |photo| %>
+   
       <img>
       <%= image_tag photo.picture.url %>
     </img>
-
+	 <% end%>
 
       <br />
 
