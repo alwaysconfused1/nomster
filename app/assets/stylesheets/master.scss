@@ -1,6 +1,27 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
+  max-height: 550px;
+  width: 100%;
+}
+
+.carousel-caption {
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-size: 60px;
+  text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.carousel {
+  box-shadow: 0px 3px 8px #2a2a2a
+}
+
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -42,6 +63,7 @@ font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvet
   color: #E43508;
  ;
   font-size: 26px;
+  margin-bottom: 0;
   
 }
 
