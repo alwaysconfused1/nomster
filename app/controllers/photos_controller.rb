@@ -9,6 +9,8 @@ class PhotosController < ApplicationController
 #@photo = @place.photos.create(photo_params)
   end
 
+  
+
  
 
   private

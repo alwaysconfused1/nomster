@@ -1,10 +1,10 @@
 
-
+<%= paginate @places %>
 
 <% @places.each do |place| %>
 <br />
 
-<%= paginate @places %>
+
 
 <div class="booyah-box col-10 offset-1">
 	<h1><%= link_to place.name, place_path(place)%></h1><br />
@@ -45,4 +45,6 @@
     <% end %>
 
 <% end %>
+
+<%= paginate @places %>
 
