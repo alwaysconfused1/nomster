@@ -32,9 +32,9 @@
   </a>
 </div>
 
-<%= paginate @places %>
+<%= paginate @place %>
 
-<% @places.each do |place| %>
+<% @place.each do |place| %>
 <br />
 
 
@@ -62,22 +62,15 @@
 <% end %>
 </div>
 </div>
- <% if @photos %>
- <% @place.photos.each do |photo| %>
-   
-      <img>
+
+ 	<% @place.each do |photo| %>
+    <img>
       <%= image_tag photo.picture.url %>
     </img>
-	 <% end%>
-
       <br />
-
-       <%= photo.caption %>
-       
-       
+       <%= photo.caption %>   
     <% end %>
-
 <% end %>
 
-<%= paginate @places %>
+<%= paginate @place %>
 
