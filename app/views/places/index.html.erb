@@ -36,13 +36,9 @@
 
 <% @place.each do |place| %>
 <br />
-
-
-
 <div class="booyah-box col-10 offset-1">
 	<h1><%= link_to place.name, place_path(place)%></h1><br />
 	<h1><%= place.name %> </h1>
-
 	<i><%= place.address %></i><br /><br />
 	<p><%= place.description %></p><br />
 
@@ -60,17 +56,21 @@
 		<small><%= place.comments.last.user.email %></small>
 	</blockquote>
 <% end %>
-</div>
-</div>
 
- 	<% @place.each do |photo| %>
+
+
+
+ 	<% place.photos.each do |photo| %>
     <img>
       <%= image_tag photo.picture.url %>
     </img>
       <br />
        <%= photo.caption %>   
-    <% end %>
+   
 <% end %>
+</div>
+</div>
 
 <%= paginate @place %>
+<%  end %>
 
