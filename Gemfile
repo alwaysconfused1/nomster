@@ -10,6 +10,8 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'geocoder'
 
+gem 'rails_12factor', group: :production
+
 gem 'figaro'
 
 gem 'fog-aws'
