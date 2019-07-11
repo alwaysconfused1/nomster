@@ -1,24 +1,35 @@
-# README
+# [Nomster](https://nomster-wilson-horrell.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication. Ability to add, update, edit and destroy any of your photos, comments, or locations.
 
-Things you may want to cover:
+#### Built using:
+- Ruby v2.5.3
+- HTML5
+- CSS
+- Bootstrap 4.3.1
+- JQuery
+- Popper JS
+- Font Awesome
+- Google Maps API
 
-* Ruby version
+#### Ruby Gems used:
+- Kaminari
+- Carrierwave
+- Figaro
+- Simple-Form
+- Devise
 
-* System dependencies
+### Home Page:
+<img width="686" alt="Screen Shot 2019-07-11 at 11 24 30 AM" src="https://user-images.githubusercontent.com/44242436/61068137-e7db2500-a3ce-11e9-8d4e-7a509ea2ee0d.png">
 
-* Configuration
+### Google Maps API:
+<img width="675" alt="Screen Shot 2019-07-11 at 11 25 48 AM" src="https://user-images.githubusercontent.com/44242436/61068187-0b05d480-a3cf-11e9-8552-12578b22cf65.png">
 
-* Database creation
+### Reviews and Comments:
+<img width="674" alt="Screen Shot 2019-07-11 at 11 26 08 AM" src="https://user-images.githubusercontent.com/44242436/61068247-2bce2a00-a3cf-11e9-993a-024d7c5e5edd.png">
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
