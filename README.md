@@ -1,5 +1,8 @@
 # [Nomster](https://nomster-wilson-horrell.herokuapp.com/)
 
+###### *Wilson Horrell is a full-stack web developer and technology enthusiast. You can find more information about him through his [portfolio](https://wilsonhorrell.netlify.com/) or contact him directly at the email address wilsonhorrell@gmail.com*
+
+
 A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication. Ability to add, update, edit and destroy any of your photos, comments, or locations.
 
 #### Built using:
