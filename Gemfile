@@ -6,7 +6,7 @@ gem 'jquery-rails'
 
 gem 'kaminari'
 
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 
 gem 'geocoder'
 
